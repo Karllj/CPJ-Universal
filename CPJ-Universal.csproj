@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5B16751-95FA-49CB-AD61-7F11DF6E38BD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CPJ_Universal</RootNamespace>
+    <AssemblyName>CPJ-Universal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\YamiD\Documents\CPJ-Universal\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9F6FFFACEFB7D8DB46C453BD80402922F6203108</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CPJ-Universal_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LOGOHD.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\admin.cs" />
+    <Compile Include="classes\carregadorOpcoes.cs" />
+    <Compile Include="classes\conexaodb.cs" />
+    <Compile Include="classes\Configuracoes.cs" />
+    <Compile Include="classes\criptografia.cs" />
+    <Compile Include="classes\criabanco.cs" />
+    <Compile Include="classes\criapasta.cs" />
+    <Compile Include="classes\extrair.cs" />
+    <Compile Include="classes\ini.cs" />
+    <Compile Include="classes\IniciaExe.cs" />
+    <Compile Include="classes\linkacesso.cs" />
+    <Compile Include="classes\ListItem.cs" />
+    <Compile Include="classes\loginLeviatanClass.cs" />
+    <Compile Include="classes\progressleviatanbar.cs" />
+    <Compile Include="classes\saveconfigs.cs" />
+    <Compile Include="janelas\desinstalacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="janelas\desinstalacao.Designer.cs">
+      <DependentUpon>desinstalacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="janelas\instalacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="janelas\instalacao.Designer.cs">
+      <DependentUpon>instalacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="janelas\leviatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="janelas\leviatan.Designer.cs">
+      <DependentUpon>leviatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="janelas\local.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="janelas\local.Designer.cs">
+      <DependentUpon>local.cs</DependentUpon>
+    </Compile>
+    <Compile Include="janelas\loginLeviatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="janelas\loginLeviatan.Designer.cs">
+      <DependentUpon>loginLeviatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="janelas\menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="janelas\menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="janelas\novasenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="janelas\novasenha.Designer.cs">
+      <DependentUpon>novasenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="janelas\sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="janelas\sobre.Designer.cs">
+      <DependentUpon>sobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="janelas\usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="janelas\usuarios.Designer.cs">
+      <DependentUpon>usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="janelas\desinstalacao.resx">
+      <DependentUpon>desinstalacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="janelas\instalacao.resx">
+      <DependentUpon>instalacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="janelas\leviatan.resx">
+      <DependentUpon>leviatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="janelas\local.resx">
+      <DependentUpon>local.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="janelas\loginLeviatan.resx">
+      <DependentUpon>loginLeviatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="janelas\menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="janelas\novasenha.resx">
+      <DependentUpon>novasenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="janelas\sobre.resx">
+      <DependentUpon>sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="janelas\usuarios.resx">
+      <DependentUpon>usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="CPJ-Universal_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EPPlus">
+      <Version>7.5.2</Version>
+    </PackageReference>
+    <PackageReference Include="MySql.Data">
+      <Version>9.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="MySqlConnector">
+      <Version>2.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.IO.Compression.ZipFile">
+      <Version>4.3.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon\LOGOHD.ico" />
+    <Content Include="LOGOHD.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
